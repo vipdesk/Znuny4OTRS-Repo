@@ -85,6 +85,10 @@ sub Load {
             }
         }
     }
+    delete $Self->{'Frontend::NotifyModule'}->{'1100-SystemContract'};
+    delete $Self->{'Frontend::NotifyModule'}->{'2000-UID-Check'};
+    delete $Self->{'Frontend::NotifyModule'}->{'8000-Daemon-Check'};
+    delete $Self->{'Frontend::NotifyModule'}->{'8000-PackageManager-CheckNotVerifiedPackages'};
 
     return 1;
 }
